@@ -1,9 +1,10 @@
+import asyncio
+
 import discord
 from discord.ext import commands
 from discord.ext import Bot
-from discord import activity
-import asyncio
-from discord.ext import tasks
+from discord import activity, tasks
+
 
 # update Benne's status
 
