@@ -8,14 +8,14 @@ from discord import activity, tasks
 
 # update Benne's status
 
-status_list = []
-statustype_list = []
-user_list = []
-
 class Status_Cycle(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
     
+    status_list = []
+    statustype_list = []
+    user_list = []
+
     @Bot.command
     async def bennestatus(ctx):
         ctx.send(user_list)
