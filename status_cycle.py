@@ -18,10 +18,11 @@ class Status_Cycle(commands.Cog):
 
     @Bot.command
     async def bennestatus(ctx):
+        ctx.send("What status type would you like? Options being: `Watching`, `Playing`, `Listening` and `Competing`")
         ctx.send(user_list)
         if ctx.message.author.id in user_list:
-                
-            ctx.send("What status type would you like? Options being: `Watching`, `Playing`, `Listening` and `Competing`")
+                ctx.send("detected user")
+            
 
         statustype_list.append()
         status_list.append()
