@@ -1,22 +1,38 @@
-
+import discord
 from discord.ext import commands
-from discord.ext.commands import Bot
+from discord.ext import Bot
+from discord import activity
+import asyncio
+from discord.ext import tasks
 
 # update Benne's status
+
+status_list = []
+statustype_list = []
+user_list = []
 
 class Status_Cycle(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
     
-    """
-    if ctx.message.author.id in user_list:
-        await ctx.send("This will now overwrite your last status request.")
-    else:
-        await ctx.send("This will now be added to the list.")
-        user_list.append(ctx.message.author.id)
-    channel = bot.get_channel(853107850217652234) #channel id here
-    await channel.send('.activity ' + statustype + " " + status)
-    """
+    @Bot.command
+    async def bennestatus(ctx):
+        ctx.send(user_list)
+        if ctx.message.author.id in user_list:
+                
+            ctx.send("What status type would you like? Options being: `Watching`, `Playing`, `Listening` and `Competing`")
+
+        statustype_list.append()
+        status_list.append()
+
+
+    @tasks.loop(seconds=10.0)
+    async def cycle(self):
+        
+        activity = discord.Activity(type=discord.ActivityType.statustype)
+        bot = commands.Bot(activity=activity)
+
+    
     
     
     def setup(bot):
