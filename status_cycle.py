@@ -1,5 +1,4 @@
 
-import discord
 from discord.ext import commands
 from discord.ext.commands import Bot
 
@@ -8,7 +7,8 @@ from discord.ext.commands import Bot
 class Status_Cycle(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
-        
+    
+    """
     if ctx.message.author.id in user_list:
         await ctx.send("This will now overwrite your last status request.")
     else:
@@ -16,3 +16,8 @@ class Status_Cycle(commands.Cog):
         user_list.append(ctx.message.author.id)
     channel = bot.get_channel(853107850217652234) #channel id here
     await channel.send('.activity ' + statustype + " " + status)
+    """
+    
+    
+    def setup(bot):
+        bot.add_cog(Status_Cycle(bot))
